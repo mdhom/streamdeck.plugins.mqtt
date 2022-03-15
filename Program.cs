@@ -23,8 +23,8 @@ namespace SharedCounter
                 {
                     services
                         .AddSingleton<MqttClientService>();
-                })
-                .RunStreamDeckPlugin();
+                    SharpDeck.StreamDeckPlugin.Run();
+                });
         }
     }
 }
