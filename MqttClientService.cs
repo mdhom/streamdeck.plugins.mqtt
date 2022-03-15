@@ -20,6 +20,7 @@ namespace SharedCounter
         public HashSet<string> SubscriptionTopics { get; } = new HashSet<string>();
 
         public event EventHandler<MqttApplicationMessageReceivedEventArgs> MessageReceived;
+        public event EventHandler Disconnected;
 
         public MqttClientService(IStreamDeckConnection connection)
         {
@@ -86,6 +87,7 @@ namespace SharedCounter
         public Task HandleDisconnectedAsync(MqttClientDisconnectedEventArgs eventArgs)
         {
             Debug.WriteLine(nameof(HandleDisconnectedAsync));
+            Disconnected?.Invoke(this, eventArgs);
             return Task.CompletedTask;
         }
     }
