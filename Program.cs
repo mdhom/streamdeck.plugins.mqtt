@@ -22,9 +22,7 @@ namespace SharedCounter
                 .ConfigureServices(services =>
                 {
                     services
-                        .AddSingleton<Counter>()
-                        .AddSingleton<MqttClientService>()
-                        .AddSingleton<IHostedService>(provider => provider.GetRequiredService<Counter>());
+                        .AddSingleton<MqttClientService>();
                 })
                 .RunStreamDeckPlugin();
         }

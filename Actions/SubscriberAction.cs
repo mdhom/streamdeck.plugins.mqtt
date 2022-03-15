@@ -12,7 +12,7 @@ namespace SharedCounter.Actions
     [StreamDeckAction("org.mdwd.sharedcounter.reset")]
     public class SubscriberAction : MqttActionBase<MqttSettings>
     {
-        public SubscriberAction(MqttClientService mqttClient) 
+        public SubscriberAction(MqttClientService mqttClient)
             : base(mqttClient)
         {
             mqttClient.MessageReceived += MqttClient_MessageReceived;
@@ -35,17 +35,11 @@ namespace SharedCounter.Actions
             if (e.ApplicationMessage.Topic != Settings.Topic)
                 return;
             Debug.WriteLine($"Received {e.ApplicationMessage.Topic}");
+            var title = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
             Task.Run(async () =>
             {
-                try
-                {
-                    var title = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-                    Debug.WriteLine($"title={title}");
-                    await SetTitleAsync(title);
-                }
-                catch (System.Exception ex)
-                {
-                }
+                Debug.WriteLine($"title={title}");
+                await SetTitleAsync(title);
             });
         }
     }
