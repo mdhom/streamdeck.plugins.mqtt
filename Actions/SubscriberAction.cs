@@ -16,6 +16,16 @@ namespace SharedCounter.Actions
             : base(mqttClient)
         {
             mqttClient.MessageReceived += MqttClient_MessageReceived;
+            mqttClient.Disconnected += MqttClient_Disconnected;
+        }
+
+        private void MqttClient_Disconnected(object sender, System.EventArgs e)
+        {
+            Task.Run(async () =>
+            {
+                Debug.WriteLine($"Disconnected => reset title");
+                await SetTitleAsync("Disconnected");
+            });
         }
 
         protected override Task OnAppear(MqttSettings settings)
