@@ -13,7 +13,7 @@ namespace SharedCounter.Actions
     /// The shared counter action; displays the count, and increments the count each press.
     /// </summary>
     [StreamDeckAction("org.mdwd.sharedcounter.counter")]
-    public class PublisherAction : MqttActionBase<MqttSettingsPublisher>
+    public class PublisherAction : MqttActionBase
     {
         public PublisherAction(MqttClientService mqttClient) 
             : base(mqttClient)

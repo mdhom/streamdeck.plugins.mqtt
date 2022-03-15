@@ -9,11 +9,11 @@ using SharpDeck.Events.Received;
 
 namespace SharedCounter.Actions
 {
-    public abstract class MqttActionBase<TSettings> : StreamDeckAction<TSettings> where TSettings : MqttSettings
+    public abstract class MqttActionBase : StreamDeckAction<MqttSettings>
     {
         private readonly MqttClientService _mqttClient;
 
-        protected TSettings Settings { get; private set; }
+        protected MqttSettings Settings { get; private set; }
 
         public MqttActionBase(MqttClientService mqttClient)
         {
@@ -22,7 +22,7 @@ namespace SharedCounter.Actions
 
         protected override async Task OnDidReceiveSettings(ActionEventArgs<ActionPayload> args)
         {
-            var settings = args.Payload.Settings["settingsModel"]?.ToObject<TSettings>();
+            var settings = args.Payload.Settings["settingsModel"]?.ToObject<MqttSettings>();
             if (settings == null) return;
 
             var mqttTargetChanged = settings.Broker != Settings?.Broker || settings.Port != Settings?.Port;
@@ -35,7 +35,7 @@ namespace SharedCounter.Actions
             await OnSettingsUpdated(Settings);
         }
 
-        protected virtual Task OnSettingsUpdated(TSettings settings)
+        protected virtual Task OnSettingsUpdated(MqttSettings settings)
         {
             return Task.CompletedTask;
         }
@@ -74,9 +74,9 @@ namespace SharedCounter.Actions
             await base.OnWillDisappear(args);
         }
 
-        private bool TryExtractSettings(SettingsPayload payload, out TSettings settings)
+        private bool TryExtractSettings(SettingsPayload payload, out MqttSettings settings)
         {
-            settings = payload.Settings["settingsModel"]?.ToObject<TSettings>();
+            settings = payload.Settings["settingsModel"]?.ToObject<MqttSettings>();
             return settings != null;
         }
 

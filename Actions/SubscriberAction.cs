@@ -10,7 +10,7 @@ namespace SharedCounter.Actions
     /// The reset count action.
     /// </summary>
     [StreamDeckAction("org.mdwd.sharedcounter.reset")]
-    public class SubscriberAction : MqttActionBase<MqttSettings>
+    public class SubscriberAction : MqttActionBase
     {
         public SubscriberAction(MqttClientService mqttClient)
             : base(mqttClient)

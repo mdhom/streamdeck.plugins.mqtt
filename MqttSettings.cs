@@ -6,13 +6,9 @@ namespace SharedCounter
 {
     public class MqttSettings
     {
+        public string Title { get; set; }
         public string Broker { get; set; }
         public int Port { get; set; }
         public string Topic { get; set; }
-    }
-
-    public class MqttSettingsPublisher : MqttSettings
-    {
-        public string Title { get; set; }
     }
 }
