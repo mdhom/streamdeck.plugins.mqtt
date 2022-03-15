@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>MyPlugin Property Inspector</title>
+	<link rel="stylesheet" href="css/sdpi.css">
+	<link rel="stylesheet" href="css/property-inspector.css">
+</head>
+<body>
+	<div class="sdpi-wrapper">
+		<div class="sdpi-item" id="port_value">
+			<div class="sdpi-item-label">Mqtt Port</div>
+			<input id="txtPortValue" class="sdpi-item-value" type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Enter counter number" onchange="setSettings(event.target.value, 'Port')" />
+		</div>
+		<div class="sdpi-item" id="broker_value">
+			<div class="sdpi-item-label">Mqtt Broker</div>
+			<input id="txtBrokerValue" class="sdpi-item-value" type="text" onchange="setSettings(event.target.value, 'Broker')" />
+		</div>
+		<div class="sdpi-item" id="topic_value">
+			<div class="sdpi-item-label">Mqtt Topic</div>
+			<input id="txtTopicValue" class="sdpi-item-value" type="text" onchange="setSettings(event.target.value, 'Topic')" />
+		</div>
+
+	</div>
+	<script src="js/property-inspector.js"></script>
+</body>
+</html>

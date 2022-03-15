@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/GeekyEggo/SharpDeck/master/src/SharpDeck.PropertyInspector/manifest-schema.json",
+  "Name": "Shared Counter",
+  "Version": "1.0.0",
+  "Author": "Richard Herman",
+  "Actions": [
+    {
+      "Name": "Publisher",
+      "UUID": "org.mdwd.sharedcounter.counter",
+      "Icon": "Images/Counter/Icon",
+      "Tooltip": "Publish something",
+      "States": [
+        {
+          "Image": "Images/Counter/Image"
+        }
+      ]
+    },
+    {
+      "Name": "Subscriber",
+      "UUID": "org.mdwd.sharedcounter.reset",
+      "Icon": "Images/Reset/Icon",
+      "Tooltip": "Subscribe and display",
+      "States": [
+        {
+          "Image": "Images/Reset/Image"
+        }
+      ]
+    }
+  ],
+  "Category": "Maxolottls Plugins",
+  "CategoryIcon": "Images/Plugin/CategoryIcon",
+  "CodePath": "SharedCounter.exe",
+  "Description": "A shared counter plugin example",
+  "PropertyInspectorPath": "PropertyInspector/property_inspector.html",
+  "Icon": "Images/Plugin/Icon",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.1"
+  },
+  "OS": [
+    {
+      "MinimumVersion": "10",
+      "Platform": "windows"
+    }
+  ]
+}
