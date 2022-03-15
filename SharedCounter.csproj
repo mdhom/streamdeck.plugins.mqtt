@@ -17,7 +17,6 @@
     <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="3.1.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
-    <PackageReference Include="SharpDeck" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
