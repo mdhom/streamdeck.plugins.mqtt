@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace streamdeck.plugins.mqtt
+﻿namespace streamdeck.plugins.mqtt
 {
     public class MqttSettings
     {

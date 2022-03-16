@@ -1,17 +1,9 @@
+using System.Threading.Tasks;
+using SharpDeck;
+using SharpDeck.Events.Received;
+
 namespace streamdeck.plugins.mqtt.Actions
 {
-    using System;
-    using System.Threading.Tasks;
-    using MQTTnet;
-    using MQTTnet.Client.Options;
-    using MQTTnet.Extensions.ManagedClient;
-    using Newtonsoft.Json;
-    using SharpDeck;
-    using SharpDeck.Events.Received;
-
-    /// <summary>
-    /// The shared counter action; displays the count, and increments the count each press.
-    /// </summary>
     [StreamDeckAction("org.mdwd.streamdeck.plugins.mqtt.publisher")]
     public class PublisherAction : MqttActionBase
     {
@@ -20,12 +12,7 @@ namespace streamdeck.plugins.mqtt.Actions
         {
         }
 
-        /// <inheritdoc/>
-        protected override async Task OnKeyDown(ActionEventArgs<KeyPayload> args)
-        {
-            await PublishAsync(Settings.Topic, "{}");
-
-            await base.OnKeyDown(args);
-        }
+        protected override async Task OnKeyDown(ActionEventArgs<KeyPayload> args) 
+            => await PublishAsync(Settings.Topic, "{}");
     }
 }

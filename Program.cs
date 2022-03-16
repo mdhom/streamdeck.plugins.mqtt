@@ -1,9 +1,9 @@
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SharpDeck.Extensions.Hosting;
+
 namespace streamdeck.plugins.mqtt
 {
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
-    using SharpDeck.Extensions.Hosting;
-
     /// <summary>
     /// The plugin.
     /// </summary>
