@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SharedCounter
+namespace streamdeck.plugins.mqtt
 {
     public class MqttSettings
     {

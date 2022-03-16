@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using SharpDeck;
 using SharpDeck.Events.Received;
 
-namespace SharedCounter.Actions
+namespace streamdeck.plugins.mqtt.Actions
 {
     public abstract class MqttActionBase : StreamDeckAction<MqttSettings>
     {

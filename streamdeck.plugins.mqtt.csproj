@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>$(APPDATA)\Elgato\StreamDeck\Plugins\org.mdwd.sharedcounter.sdPlugin\</OutputPath>
+    <OutputPath>$(APPDATA)\Elgato\StreamDeck\Plugins\org.mdwd.streamdeck.plugins.mqtt.sdPlugin\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 

@@ -1,4 +1,4 @@
-namespace SharedCounter
+namespace streamdeck.plugins.mqtt
 {
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;

@@ -12,7 +12,7 @@ using MQTTnet.Client.Receiving;
 using MQTTnet.Extensions.ManagedClient;
 using SharpDeck.Connectivity;
 
-namespace SharedCounter
+namespace streamdeck.plugins.mqtt
 {
     public class MqttClientService : IHostedService, IMqttApplicationMessageReceivedHandler, IMqttClientDisconnectedHandler
     {

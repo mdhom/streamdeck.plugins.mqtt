@@ -1,4 +1,4 @@
-namespace SharedCounter.Actions
+namespace streamdeck.plugins.mqtt.Actions
 {
     using System;
     using System.Threading.Tasks;
@@ -12,7 +12,7 @@ namespace SharedCounter.Actions
     /// <summary>
     /// The shared counter action; displays the count, and increments the count each press.
     /// </summary>
-    [StreamDeckAction("org.mdwd.sharedcounter.counter")]
+    [StreamDeckAction("org.mdwd.streamdeck.plugins.mqtt.publisher")]
     public class PublisherAction : MqttActionBase
     {
         public PublisherAction(MqttClientService mqttClient) 

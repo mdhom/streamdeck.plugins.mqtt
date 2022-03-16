@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/GeekyEggo/SharpDeck/master/src/SharpDeck.PropertyInspector/manifest-schema.json",
-  "Name": "Shared Counter",
+  "Name": "Servus",
   "Version": "1.0.0",
-  "Author": "Richard Herman",
+  "Author": "Max Dhom & Christian Dirnhofer",
   "Actions": [
     {
       "Name": "Publisher",
-      "UUID": "org.mdwd.sharedcounter.counter",
+      "UUID": "org.mdwd.streamdeck.plugins.mqtt.publisher",
       "Icon": "Images/Counter/Icon",
       "Tooltip": "Publish something",
       "States": [
@@ -17,7 +17,7 @@
     },
     {
       "Name": "Subscriber",
-      "UUID": "org.mdwd.sharedcounter.reset",
+      "UUID": "org.mdwd.streamdeck.plugins.mqtt.subscriber",
       "Icon": "Images/Reset/Icon",
       "Tooltip": "Subscribe and display",
       "States": [
@@ -27,10 +27,10 @@
       ]
     }
   ],
-  "Category": "Maxolottls Plugins",
+  "Category": "Servus",
   "CategoryIcon": "Images/Plugin/CategoryIcon",
-  "CodePath": "SharedCounter.exe",
-  "Description": "A shared counter plugin example",
+  "CodePath": "streamdeck.plugins.mqtt.exe",
+  "Description": "StreamDeck plugins von servus.software",
   "PropertyInspectorPath": "PropertyInspector/property_inspector.html",
   "Icon": "Images/Plugin/Icon",
   "SDKVersion": 2,

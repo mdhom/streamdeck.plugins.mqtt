@@ -1,4 +1,4 @@
-namespace SharedCounter.Actions
+namespace streamdeck.plugins.mqtt.Actions
 {
     using System.Diagnostics;
     using System.Text;
@@ -9,7 +9,7 @@ namespace SharedCounter.Actions
     /// <summary>
     /// The reset count action.
     /// </summary>
-    [StreamDeckAction("org.mdwd.sharedcounter.reset")]
+    [StreamDeckAction("org.mdwd.streamdeck.plugins.mqtt.subscriber")]
     public class SubscriberAction : MqttActionBase
     {
         public SubscriberAction(MqttClientService mqttClient)

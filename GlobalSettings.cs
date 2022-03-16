@@ -1,4 +1,4 @@
-﻿namespace SharedCounter
+﻿namespace streamdeck.plugins.mqtt
 {
     /// <summary>
     /// The global settings.
