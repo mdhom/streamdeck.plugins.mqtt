@@ -57,13 +57,6 @@ namespace streamdeck.plugins.mqtt.Actions
             return Task.CompletedTask;
         }
 
-        protected override async Task OnWillDisappear(ActionEventArgs<AppearancePayload> args)
-        {
-            _mqttClient.Disconnect();
-
-            await base.OnWillDisappear(args);
-        }
-
         private bool TryExtractSettings(SettingsPayload payload, out MqttSettings settings)
         {
             settings = payload.Settings["settingsModel"]?.ToObject<MqttSettings>();

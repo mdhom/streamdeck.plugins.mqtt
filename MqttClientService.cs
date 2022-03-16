@@ -58,7 +58,7 @@ namespace streamdeck.plugins.mqtt
             await MqttClient.StartAsync(options);
         }
 
-        public void Disconnect()
+        private void Disconnect()
         {
             Debug.WriteLine($"Disconnect");
             MqttClient.Dispose();
